@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import {Card} from '../../Components/Card';
+import {Footer} from '../../Components/Footer';
 
 function App() {
   const [studentName, setStudentName] = useState();
@@ -45,6 +46,7 @@ function App() {
   }, [])
 
   return (
+    
     <div className="container">
       <header>
         <h1>Lista de presença</h1>
@@ -66,7 +68,10 @@ function App() {
               name={student.name} 
               time={student.time}/>))
       }
+    <Footer />
     </div>
+
+    
   )
 }
 
